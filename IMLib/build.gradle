@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 2018022610
+        versionName "2.8.28 Dev"
+
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            manifestPlaceholders = [
+                    RONG_CLOUD_APP_KEY: '6tnym1br6c9v7'
+            ]
+        }
+        debug {
+            manifestPlaceholders = [
+                    RONG_CLOUD_APP_KEY: 'c9kqb3rdcmt5j'
+            ]
+        }
+
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-compat:27.0.0'
+}
+
+repositories { flatDir { dirs '../push/aars' }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+}

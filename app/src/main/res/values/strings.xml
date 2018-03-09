@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">hava</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_conversation_list">ConversationListActivity</string>
+    <string name="title_activity_conversation">ConversationActivity</string>
+    <string name="title_activity_sub_conversation_list_activtiy">SubConversationListActivtiy
+    </string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>
